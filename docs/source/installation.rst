@@ -20,7 +20,7 @@ since the **prebuilt binaries are included in an isolated environment** inside t
 Installation steps
 --------------------------------------------------------------------------------
 
-Step 1. Installation of System Requirements
+Step 1. Installation of required packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For OpenLane you need a couple of tools installed:
@@ -35,7 +35,7 @@ For OpenLane you need a couple of tools installed:
 After installing all of the above, proceed to :ref:`step2`.
 
 
-Installation of requirements on Ubuntu
+Instructions for Ubuntu
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 You need at least Ubuntu 20.04 and above. All of the required packages are included in the Docker image, so the installation list is slim.
@@ -85,7 +85,7 @@ After installation you will get Hello World of Docker:
 Proceed to :ref:`step2`
 
 
-Installation of requirements under macOS
+Installation of required packages under macOS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 First install `Homebrew <https://brew.sh/>`_ then run script below to install the required packages:
