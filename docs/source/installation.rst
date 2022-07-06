@@ -173,10 +173,11 @@ In order to check installation, you can use following commands:
 
 .. image:: ../_static/installation/version_check.png
 
-Step 5. Installing OpenLane
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 5. Downloading and validating OpenLane installation
+--------------------------------------------------------------------------------
 
-Clone OpenLane repository and change directory into it. Then install the sky130 PDK and run flow on the test design.
+In order to download and validate OpenLane installation run the following commands,
+explanation of each step is provided below:
 
 .. code-block:: console
 
@@ -187,10 +188,17 @@ Clone OpenLane repository and change directory into it. Then install the sky130 
 
 .. image:: ../_static/installation/git_clone_openlane.png
 
-After the above script downloads OpenLane and installs it, the ``make test`` command will test the installation of PDK and OpenLane
+- ``git clone`` downloads latest stable version of OpenLane
+- ``cd OpenLane/`` changes current directory to the newly downloaded OpenLane 
+- The Makefile ``make`` does following:
+    - Pulls the OpenLane Docker image.
+    - Pulls and updates the PDK
+- ``make test`` Tests the whole setup with a complete run on a small design, `spm`.
 
 .. image:: ../_static/installation/successful_make_test.png
 
+
+This should produce a clean run for the spm. The final layout will be generated at this path: ``./designs/spm/runs/openlane_test/results/magic/spm.gds``.
 
 Updating OpenLane
 --------------------------------------------------------------------------------
@@ -204,4 +212,6 @@ To update the OpenLane, run following commands:
    make
    make test # This is to test that the flow and the pdk were properly updated
 
-
+It is very similar to installation, one difference is
+that we pull the changes instead of creating a new workspace.
+Git pull will not remove your files inside workspace by default.
